@@ -13,4 +13,4 @@ function getTheLargest(firstNum,secondNum,thirdNum){
     }
 }
 //calling the function with 3 arguments and displaying the result
-console.log(getTheLargest(10,70,30));
+console.log(`The greatest number is: ${getTheLargest(10,70,30)}`);
