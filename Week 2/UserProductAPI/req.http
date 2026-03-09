@@ -1,0 +1,61 @@
+###Read all users
+GET http://localhost:3000/users
+
+### Read a user by id
+GET http://localhost:3000/users/103
+
+### Create new user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "id":103,
+    "name":"Sushanth",
+    "age":18
+}
+
+### Update an existing user
+PUT http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "id":103,
+    "name":"Manoj",
+    "age":18
+}
+
+### Delete a user
+DELETE http://localhost:3000/users/103
+
+
+
+###Read all products
+GET http://localhost:3000/products
+
+### Read product by brand
+GET http://localhost:3000/products/Lenovo
+
+### Create new product
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "productId":102,
+    "name":"Laptop",
+    "brand":"Dell",
+    "price":90000
+}
+
+### Update an existing product
+PUT http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "productId":102,
+    "name":"Mouse",
+    "brand":"Lenovo",
+    "price":8000
+}
+
+### Delete a product
+DELETE http://localhost:3000/products/102
