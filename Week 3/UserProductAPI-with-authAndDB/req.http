@@ -1,0 +1,81 @@
+###Read all users (req to protected route)
+GET http://localhost:3000/user-api/users
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdmlAZ21haWwuY29tIiwiaWF0IjoxNzcyOTU4MDI1LCJleHAiOjE3NzI5NTgwNDV9.M-QuQgd9ZbxoqCLeFbuVMSaQDfz6SRjwZS5LOatPjcU; Path=/; HttpOnly; SameSite=Lax
+
+### Read a user by id
+GET http://localhost:3000/user-api/users/69abf976857a6bbd220aeb1f
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdmlAZ21haWwuY29tIiwiaWF0IjoxNzcyODc4Mjg5LCJleHAiOjE3NzI4NzgzMDl9.zaj5szCVasFq7z8-atk8T01sOjDdv731ZdMuxkfgeQk; Path=/; HttpOnly; SameSite=Lax
+
+### Create new user
+POST http://localhost:3000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"manoj",
+    "password":"manoj",
+    "email":"manoj@gmail.com",
+    "age":20
+}
+
+### Update an existing user
+PUT http://localhost:3000/user-api/users/69abf33d5c2213e370694f69
+Content-Type: application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdmlAZ21haWwuY29tIiwiaWF0IjoxNzcyODc2NjI2LCJleHAiOjE3NzI4Nzg2MjZ9.0nP8aXw7FO4_kPFXiz332iCL1tohBXzYxiL4PGSuj40; Path=/; HttpOnly; SameSite=Lax
+
+{
+    "username":"Ravik",
+    "password":"ravi",
+    "email":"ravi@gmail.com",
+    "age":30
+}
+
+###user login
+POST http://localhost:3000/user-api/auth
+Content-Type:application/json
+
+{
+    "email":"ravi@gmail.com",
+    "password":"ravi"
+
+}
+
+### Delete a user by id
+DELETE http://localhost:3000/user-api/users/69abf976857a6bbd220aeb1f
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdmlAZ21haWwuY29tIiwiaWF0IjoxNzcyODc4NDU0LCJleHAiOjE3NzI4Nzg0NzR9.Ch0SJ0D-DOJqEa1x-SODwcgYd8F7-7sKq37XTi1PDyg; Path=/; HttpOnly; SameSite=Lax
+
+### Products
+
+###Read all products
+GET http://localhost:3000/product-api/products
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdmlAZ21haWwuY29tIiwiaWF0IjoxNzcyOTU5NjUzLCJleHAiOjE3NzI5NTk2NzN9.oMCqH8oFMGL7konrVm3ckLyVYMe_gJrDFkXAnV9jkOk; Path=/; HttpOnly; SameSite=Lax
+
+###Read by ID
+GET http://localhost:3000/product-api/products/2
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdmlAZ21haWwuY29tIiwiaWF0IjoxNzcyOTU5NzYyLCJleHAiOjE3NzI5NTk3ODJ9.m-UEtKcFSCP668g9CGqN1Et8OlXg5QtXrJ8FU8l8dJY; Path=/; HttpOnly; SameSite=Lax
+
+###Create a product
+POST http://localhost:3000/product-api/products
+Content-Type:application/json
+
+{
+    "productId":2,
+    "productName":"Mouse",
+    "price":10000,
+    "brand":"HP"
+}
+
+###Update by ID
+PUT http://localhost:3000/product-api/products/2
+Content-Type:application/json
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdmlAZ21haWwuY29tIiwiaWF0IjoxNzcyOTU5OTY0LCJleHAiOjE3NzI5NTk5ODR9.IKf7dMgD5Auuwe4L6_vzDWF489Bdc9mmydEha7zobrA; Path=/; HttpOnly; SameSite=Lax
+
+{
+    "productId":2,
+    "productName":"CPU",
+    "price":20000,
+    "brand":"Lenovo"
+}
+
+###Delete by ID
+DELETE http://localhost:3000/product-api/products/2
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhdmlAZ21haWwuY29tIiwiaWF0IjoxNzcyOTYwMDY4LCJleHAiOjE3NzI5NjAwODh9.B4LBPzyKavUNiGS84m6mstaTEmbhSqyoOTA0UQePTSg; Path=/; HttpOnly; SameSite=Lax
