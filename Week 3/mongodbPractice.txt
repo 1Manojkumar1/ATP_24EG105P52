@@ -1,0 +1,69 @@
+### Create employees collection and insert 5 emp documents with below 
+  Structure
+
+       {
+              empId:"",
+              name:"",
+              skills:[],
+              experiences:[
+                     {
+                            companyName:",
+                            yearsOfExp:"
+                     }
+              ]
+       }
+
+
+1. Find emps with React skill
+2. Add new skills "Express"
+3. Add new experince
+4. Delete first experince
+5. Add address to emp whose name is "vikas"
+
+
+// Insert documents
+db.emp.insertOne({id:101,name:'manoj',skills:["html","css","react"],experiences:[{companyName:"amazon",yearsOfexp:4}]})
+
+db.emp.insertOne({id:102,name:'Nikhil',skills:["java","python"],experiences:[{companyName:"flipkart",yearsOfexp:7}]})
+
+db.emp.insertOne({id:103,name:'sohan',skills:["javascript","python"],experiences:[{companyName:"myntra",yearsOfexp:10}]})
+
+db.emp.insertOne({id:104,name:'vikas',skills:["typescript","python"],experiences:[{companyName:"meesho",yearsOfexp:2}]})
+
+db.emp.insertOne({id:105,name:'ravi',skills:["typescript","python"],experiences:[{companyName:"campgemini",yearsOfexp:7}]})
+
+
+// Find employees with react skill
+db.emp.find({skills:"react"})
+
+
+// Add new skill
+db.emp.updateOne({name:"manoj"},{$push:{skills:"Express"}})
+
+
+// Add new experience (mistyped field)
+db.emp.updateOne({name:"manoj"},{$push:{experince:[{companyname:"meesho",yearsOfExp:9}]}})
+
+
+// Remove last experience
+db.emp.updateOne({name:"manoj"},{$pop:{experiences:1}})
+
+
+// Insert new employee
+db.emp.insertOne({id:106,name:'vikas',skills:["typescript","java"],experiences:[{companyName:"campgemini",yearsOfexp:14}]})
+
+
+// Add address
+db.emp.updateOne({name:"vikas"},{$push:{address:[{city:"hyderabad",pincode:33333}]}})
+
+
+// Remove last address
+db.emp.updateOne({name:"vikas"},{$pop:{address:1}})
+
+
+// Add address correctly
+db.emp.updateOne({name:"vikas"},{$push:{address:{city:"hyderabad",pincode:33333}}})
+
+
+// Display all documents
+db.emp.find()
