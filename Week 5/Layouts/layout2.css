@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.heading1{
+    background: rgb(185, 182, 182);
+    padding: 59px;
+}
+
+.button{
+    background: blue;
+    padding: 10px;
+    color: white;
+    margin:30px;
+}
+
+.main{
+    display: flex;
+}
+
+.button2{
+    background: rgb(148, 151, 152);
+    padding:10px;
+    margin:10px;
+}
+
+.heading2{
+    background: #eee;
+    padding: 50px;
+}
+
+.heading2 h1{
+    margin-bottom:15px
+}
