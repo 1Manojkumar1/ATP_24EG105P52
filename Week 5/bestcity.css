@@ -1,0 +1,59 @@
+@media screen and (min-width:400px){
+     .heading{
+    background: white;  
+   
+} 
+.heading p{ 
+     position: absolute;
+  top: 0;
+  right: 0;  
+  color: aqua; 
+  word-spacing: 25px; 
+  
+}  
+.heading h1{
+    color: blue;
+} 
+.second{
+    text-align: center;  
+    background-color: aqua;  
+    color: white;  
+     padding: 100px;
+}
+.second img{
+    border-radius: 50%;
+    width: 100px;  
+   
+} 
+.third{
+    display: flex;
+}   
+.flex1{
+    flex: 1;
+} 
+.flex2{
+    flex: 1; 
+    /* text-align: center; */  
+    
+}
+.flex3{
+    flex: 1;
+  
+}
+.flex2 img{
+    width: 600px;
+
+} 
+.flex2 h1{
+    text-align: left; 
+    color: blue;
+} 
+.flex1 h1{
+    text-align: left; 
+    color: blue;
+}
+.flex3 h1{
+    text-align: left; 
+    color: blue;
+}
+}
