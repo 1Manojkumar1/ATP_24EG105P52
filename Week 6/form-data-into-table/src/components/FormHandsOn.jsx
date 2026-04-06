@@ -10,10 +10,10 @@ function FormHandsOn(){
     }
     return(
         <div>
-            <div className="text-2xl m-9">
+            <div className=" m-9">
         <h1 className='text-center text-3xl font-bold'>Form Demo HandsOn</h1>
         {/* form */}
-        <form className='max-w-md mx-auto mt-10' onSubmit={handleSubmit(onFormSubmit)}>
+        <form className='max-w-md mx-auto mt-10 p-9 bg-violet-200 rounded-3xl' onSubmit={handleSubmit(onFormSubmit)}>
             <div className="mb-3">
 
                 {/* username */}
@@ -25,7 +25,7 @@ function FormHandsOn(){
                         validate:(v)=>v.trim().length!==0 || "Whitespace is not allowed"
                     })
                 }
-                    id="firstName" className="border w-full p-1"/>
+                    id="firstName" className="border w-full p-1 mb-2"/>
                 {/* firstname validation error message */}
                 {
                     errors.firstName?.type==="required" && <p className="text-red-600 text-xl">{errors.firstName.message}</p>
@@ -46,7 +46,7 @@ function FormHandsOn(){
                         validate:(v)=>v.trim().length!==0 || "Whitespace is not allowed"
                     })
                 }
-                id="email" className="border w-full p-1"/>
+                id="email" className="border w-full p-1 mb-2"/>
                 {/* email validation error message */}
                 {
                     errors.email?.type==="required" && <p className="text-red-600 text-xl">{errors.email.message}</p>
@@ -67,7 +67,7 @@ function FormHandsOn(){
                         validate:(v)=>v.trim().length!==0 || "Whitespace is not allowed"
                     })
                 }
-                id="dob" className="border w-full p-1"/>
+                id="dob" className="border w-full p-1 mb-2"/>
                 {/* email validation error message */}
                 {
                     errors.dob?.type==="required" && <p className="text-red-600 text-xl">{errors.dob.message}</p>
@@ -78,16 +78,16 @@ function FormHandsOn(){
                 {
                     errors.dob?.type==="validate" && <p className="text-red-600 text-xl">{errors.dob.message}</p>
                 }
-                <button type="submit" className="p-3 bg-cyan-400 block mx-auto mt-3">Add User</button>
+                <button type="submit" className="p-2 bg-purple-400 text-white block mx-auto mt-3 w-1/2 rounded-3xl hover:bg-purple-500">Add User</button>
             </div>
         </form>
     </div>
 
-    <div className="mt-10 px-4">
-        <h2 className="text-center text-2xl mb-4">List of Users</h2>
+    <div className="mt-10 mb-10 px-4">
+        <h2 className="text-center text-2xl mb-4 font-bold">List of Users</h2>
         <div>
             <table className="mx-auto border border-black">
-                <thead className="bg-gray-200">
+                <thead className="bg-purple-200">
                     <tr>
                         <th className="border px-4 py-2">First Name</th>
                         <th className="border px-4 py-2">Email</th>
